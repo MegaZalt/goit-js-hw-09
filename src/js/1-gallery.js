@@ -74,7 +74,7 @@ const galleryItems = [
 
 const galleryContainer = document.querySelector('.gallery');
 
-const galleryGalleryItem = items => {
+const createGallery = items => {
   return items
     .map(({ preview, original, description }) => {
       return `
@@ -92,7 +92,7 @@ const galleryGalleryItem = items => {
     .join('');
 };
 
-galleryContainer.innerHTML = galleryGalleryItem(galleryItems);
+galleryContainer.innerHTML = createGallery(galleryItems);
 
 const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
@@ -101,4 +101,4 @@ const lightbox = new SimpleLightbox('.gallery a', {
   enableKeyboard: true,
 });
 
-console.log("SimpleLightbox initialized")
+console.log("SimpleLightbox initialized");
