@@ -37,7 +37,5 @@ function handleSubmit(event) {
 document.addEventListener('DOMContentLoaded', () => {
   loadForm();
   document.querySelector('.feedback-form').addEventListener('input', saveForm);
-  document
-    .querySelector('.feedback-form')
-    .addEventListener('submit', handleSubmit);
+  document.querySelector('.feedback-form').addEventListener('submit', handleSubmit);
 });
