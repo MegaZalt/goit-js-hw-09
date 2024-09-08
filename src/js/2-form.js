@@ -12,7 +12,7 @@ function loadForm() {
 
   if (savedData) {
     const { email, message } = JSON.parse(savedData);
-    
+
     document.querySelector('input[name="email"]').value = email || '';
     document.querySelector('textarea[name="message"]').value = message || '';
   }
@@ -28,9 +28,10 @@ function handleSubmit(event) {
     return;
   }
 
+  console.log('Form data', { email, message });
+
   localStorage.removeItem('feedback-form-state');
   event.target.reset();
-
 }
 
 document.addEventListener('DOMContentLoaded', () => {
